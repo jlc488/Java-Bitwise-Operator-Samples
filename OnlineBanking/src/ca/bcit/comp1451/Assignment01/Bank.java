@@ -55,10 +55,8 @@ public class Bank {
 
 	public void showTransactions(String name) {
 		for (Map.Entry<String, Account> entry : this.accounts.entrySet()) {
-			Account temp = entry.getValue();
-			Customer tempCustomer = temp.getCustomer();
-			if (tempCustomer.getName().equals(name)) {
-				temp.displayAccountInfo();
+			if( entry.getKey().equals(name)) {
+				entry.getValue().transactionDisplay();
 			}
 		}
 	}

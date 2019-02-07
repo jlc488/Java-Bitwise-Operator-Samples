@@ -24,10 +24,10 @@ public class Date {
 	 }
 	 
 	 private int mutateDay(int day) {
-		 return (day >= 1 || day <=31)? day : 1; //ternary operator, this is same as mutateMonth
+		 return (day >= 1 && day <=31)? day : 1; //ternary operator, this is same as mutateMonth
 	 }
 	 
-	 private void setDay(int day){
+	 public void setDay(int day){
 		 this.day = this.mutateDay(day);
 	 }
 	 
@@ -38,14 +38,14 @@ public class Date {
 	 private int mutateMonth(int month) {
 		 int ret = 1;
 		 
-		 if( month >= 1 || month <= 31 ) {
+		 if( month >= 1 && month <= 12 ) {
 			 ret = month;
 		 }
 		 
 		 return ret;
 	 }
 	 
-	 private void setMonth(int month){
+	 public void setMonth(int month){
 		 this.month = this.mutateMonth(month);
 	 }
 	 
@@ -56,14 +56,14 @@ public class Date {
 	 private int mutateYear(int year) {
 		 int ret = 1900;
 		 
-		 if(1900 >= year || year <= this.currentYear) {
+		 if(1900 <= year && year <= this.currentYear) {
 			 ret = year;
 		 }
 		 
 		 return ret;
 	 }
 	 
-	 private void setYear(int year){
+	 public void setYear(int year){
 		 this.year = this.mutateYear(year);
 	 }
 	 

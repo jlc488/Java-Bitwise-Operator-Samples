@@ -78,7 +78,7 @@ public class Account {
 	public boolean withdraw(double amount) {
 		boolean done = false;
 		
-		if(amount > 0 || amount <= this.getBalance()) {
+		if(amount > 0 && amount <= this.getBalance()) {
 			this.setBalance(this.getBalance() - amount);
 			done = true;
 		}else {
@@ -95,7 +95,7 @@ public class Account {
 	
 	//a method that iterates thorugh the transactionRecord collection and displays it's info in an organized manner
 	public void transactionDisplay() {
-		for (TransactionRecord tr : arrayList) {
+		for (TransactionRecord tr : this.arrayList) {
 			System.out.println("Account Number: " + tr.getAccountNumber());
 			System.out.println("Transaction Type: " + tr.getTransactionType());
 			System.out.println("The Amount : " + tr.getAmount());

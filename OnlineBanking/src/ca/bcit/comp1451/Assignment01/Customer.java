@@ -15,7 +15,7 @@ public class Customer {
 		return name;
 	}
 	
-	private void setName(String name){
+	public void setName(String name){
 		this.name = this.validateName(name);
 	}
 	
@@ -31,7 +31,7 @@ public class Customer {
 		return address;
 	}
 	
-	private void setAddress(String address){
+	public void setAddress(String address){
 		this.address = this.validateAddress(address);
 	}
 	
@@ -56,7 +56,7 @@ public class Customer {
 		return dob;
 	}
 	
-	private void setDob(String dob){
+	public void setDob(String dob){
 		this.dob = this.validateDoB(dob);
 	}
 	

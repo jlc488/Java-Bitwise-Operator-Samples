@@ -20,7 +20,7 @@ public class TransactionRecord {
 		return amount;
 	}
 	
-	private void setAmount(double amount) {
+	public void setAmount(double amount) {
 		this.amount = this.amountValidator(amount);
 	}
 	
@@ -37,7 +37,7 @@ public class TransactionRecord {
 		return date;
 	}
 	
-	private void setDate(Date date) {
+	public void setDate(Date date) {
 		this.date = this.dateValidator(date);
 	}
 	
@@ -53,7 +53,7 @@ public class TransactionRecord {
 		return accountNumber;
 	}
 	
-	private void setAccountNumber(String accountNumber) {
+	public void setAccountNumber(String accountNumber) {
 		this.accountNumber = this.accountNumberValidator(accountNumber);
 	}
 	
@@ -69,7 +69,7 @@ public class TransactionRecord {
 		return transactionType;
 	}
 
-	private void setTransactionType(String transactionType) {
+	public void setTransactionType(String transactionType) {
 		this.transactionType = this.transactionTypeValidator(transactionType);
 	}
 	
