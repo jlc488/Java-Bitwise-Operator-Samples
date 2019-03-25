@@ -97,8 +97,11 @@ public class Labour extends ProjectInvoice {
 	public String toString() {
 		//add the following to the superclass' toString() method.  
 		//Hourly rate criteria, type of labour, cost of labour transportation and totalCost.
-		return super.toString() + "hourly rate criteria:  " + getHourlyRateCriteria() + ", type of labour: " + getTypeOfLabour() + 
-				", cost of Labour Transportation: "  +	getTransportationCost() + " and total cost: " + calculateTotalCost(workingHours, rate);
+		return super.toString() + "Hourly rate criteria:  " + getHourlyRateCriteria() + "\n" +
+									"Type of labour: " + getTypeOfLabour() + "\n" + 
+									"Cost of Labour Transportation: "  +	getTransportationCost() + "\n" +
+									"The Total cost including %5 tax: " + calculateTotalCost(workingHours, rate); 
+
 	}
 	
 }

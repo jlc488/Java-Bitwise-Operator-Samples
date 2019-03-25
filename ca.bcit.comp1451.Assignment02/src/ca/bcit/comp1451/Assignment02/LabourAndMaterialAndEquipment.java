@@ -69,10 +69,14 @@ public class LabourAndMaterialAndEquipment extends LabourAndMaterial {
 		//add the following to the superclass' toString() method.  
 		//equipment number of rented hours, equipment rental fees, training fees if applicable
 		if(calculateTrainingFees() < 0) {
-			return super.toString() + "Number rented hours: " + getNumberOfRentedHours()  +	", equipment Rental Fees: " + calculateTotalRentalFees();
+			return super.toString() + "\n" + 
+								"Number rented hours: " + getNumberOfRentedHours()  +	"\n" + 
+								"Equipment Rental Fees: " + calculateTotalRentalFees() + "\n";
 		}else {
-			return super.toString() + "Number rented hours: " + getNumberOfRentedHours()  +	", equipment Rental Fees: " + calculateTotalRentalFees() + 
-					", Training Fees: " + calculateTrainingFees();
+			return super.toString() + "\n" + 
+								"Number rented hours: " + getNumberOfRentedHours() + "\n" +
+								"Equipment Rental Fees: " + calculateTotalRentalFees() + "\n" +
+								"Training Fees: " + calculateTrainingFees();
 		}
 	}
 	

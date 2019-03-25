@@ -71,8 +71,10 @@ public abstract class ProjectInvoice implements Comparable<ProjectInvoice>{
 	@Override
 	public String toString() {
 		//return a string of the the invoice number, project name, number of working hours and the hourly rate
-		return "Invoice number:  " + getInvoiceNumber() + ", the project name: " + getProjectName() + ", the number of working hours: "  +
-				getWorkingHours() + " and hourly rate: " + getRate();
+		return "Invoice number:  " + getInvoiceNumber() + "\n" + 
+				"Project name: " + getProjectName() + "\n" + 
+				"Number of working hours: "  + 	getWorkingHours() + "\n" + 
+				"Hourly rate: " + getRate() + "\n" ;
 	}
 
 

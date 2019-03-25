@@ -28,21 +28,25 @@ public class InsuranceCompany {
 		}
 		
 		//Method to add a project invoice object to the collection
-		public void addProjectInvoice(ProjectInvoice projectInvoice) {
-			
+		public void addProjectInvoice(ProjectInvoice projectInvoice) {		
+			//can't be project invoice, make it labour, or labourMaterial or some other object(s) but how?
+			// do if instanceOf labour then.. or if instanceOf labourAndMaterial then... or etc
 			list.add(projectInvoice);
 			
+			//String projectName, int workingHours, double rate
+			
 		}
-		public void displayProjectInvoice(String invoiceNumber) {
+		public void displayProjectInvoice(String invoiceNumber) throws InvalidInvoiceNumberException {
 			if(invoiceNumber != null && invoiceNumber.length() >= 7) {
 				//search collection and print invoice
 				for(ProjectInvoice p : list) {
 					if(p.getInvoiceNumber().equals(invoiceNumber)) {
 						System.out.println(p);
+						System.out.println("");
 					}
 				}
 			}else {
-				throw new IllegalArgumentException("invoice number can't be null or less than 7 chars");
+				throw new InvalidInvoiceNumberException("invoice number can't be null or less than 7 chars");
 			}
 		}
 		

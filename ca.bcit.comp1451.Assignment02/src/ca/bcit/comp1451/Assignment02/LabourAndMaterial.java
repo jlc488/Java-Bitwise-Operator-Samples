@@ -78,7 +78,9 @@ public class LabourAndMaterial extends Labour {
 		//add the following to the superclass' toString() method.  
 		//Hourly rate criteria, type of labour, cost of labour transportation and totalCost.
 		  //if(this.getClass() == LabourAndMaterial.class) {
-			return super.toString() + getMaterialPurchasePrice()  +	getTransportationCost();
+			return super.toString() + "\n" +
+									"Material Purchase Price: " + getMaterialPurchasePrice() + "\n"  +	
+									"Transportation Cost: " + getTransportationCost();
 		//}else {
 		//	return super.toString() + getMaterialPurchasePrice()  +	getTransportationCost();
 		}
